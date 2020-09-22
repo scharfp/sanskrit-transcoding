@@ -1,0 +1,205 @@
+<fsm start='SKT' inputDecoding='UTF-8' outputEncoding='UTF-8'>
+<!-- TranscodeFile/transcoders/slp1_roman.xml converted to the format of TranscodePython/transcoder/slp1_roman.xml -->
+<!-- The TranscodeFile version, and hence this file, maps to combining diacritics rather than precomposed Unicode characters -->
+<!-- It also included mapping to capitals from an SLP1 character in curly brackets; removed -->
+<!-- Both map SLP1 ^ to combining ^ not grave accent. -->
+<!-- Format changes: -->
+<!-- Remove  at end of e-element -->
+<!-- Add <s>SKT</s> at beginning of e-element -->
+<!-- Remove @n in open e-tag -->
+<!-- Remove the parent edges-element, and the buffers element and its children -->
+<!-- Changed fsm-element attributes -->
+<e> <s>SKT</s> <in>a</in> <out>a</out> </e>
+<e> <s>SKT</s> <in>A</in> <out>a\u0304</out> </e>
+
+<e> <s>SKT</s> <in>i</in> <out>i</out> </e>
+<e> <s>SKT</s> <in>I</in> <out>i\u0304</out> </e>
+<!-- Preceded by a vowel -->
+<!--e> <in>({?[aAiIuUfFxXeEoO]}?)i</in> <out>\1i\u0308</out></e-->
+<!--e> <in>i</in> <out>i\u0308</out></e-->
+<!-- Latin lowercase letter i + diaeresis \u0308 -->
+<!--e n='9'> <in>{i}</in> <out>I\u0308</out></e-->
+<!-- Latin uppercase letter I + diaeresis \u0308 -->
+<!--e n='10'> <in>I</in> <out>i\u0304\u0308</out></e-->
+<!-- Latin lowercase letter i + \u0304 macron + diaeresis \u0308 -->
+<!--e n='11'> <in>{I}</in> <out>I\u0304\u0308</out></e-->
+<!-- Latin uppercase letter I + \u0304 macron + diaeresis \u0308 -->
+
+<e> <s>SKT</s> <in>u</in> <out>u</out> </e>
+<e> <s>SKT</s> <in>U</in> <out>u\u0304</out> </e>
+<!-- Preceded by a vowel -->
+<!--e n='16'> <in>u</in> <out>u\u0308</out></e-->
+<!-- Latin lowercase letter u + diaeresis \u0308 -->
+<!--e n='17'> <in>{u}</in> <out>U\u0308</out></e-->
+<!-- Latin uppercase letter U + diaeresis \u0308 -->
+<!--e n='18'> <in>U</in> <out>u\u0304\u0308</out></e-->
+<!-- Latin lowercase letter u + \u0304 macron + diaeresis \u0308 -->
+<!--e n='19'> <in>{U}</in> <out>U\u0304\u0308</out></e-->
+<!-- Latin uppercase letter U + \u0304 macron + diaeresis \u0308 -->
+
+<e> <s>SKT</s> <in>f</in> <out>r\u0325</out> </e>
+<e> <s>SKT</s> <in>F</in> <out>r\u0325\u0304</out> </e>
+<!-- \u0325 combining ring below + \u0304 macron -->
+
+<e> <s>SKT</s> <in>x</in> <out>l\u0325</out> </e>
+<e> <s>SKT</s> <in>X</in> <out>l\u0325\u0304</out> </e>
+<!-- l or L + \u0325 combining ring below + \u0304 macron -->
+
+<e> <s>SKT</s> <in>e</in> <out>e</out> </e>
+<e> <s>SKT</s> <in>E</in> <out>ai</out> </e>
+
+<e> <s>SKT</s> <in>o</in> <out>o</out> </e>
+<e> <s>SKT</s> <in>O</in> <out>au</out> </e>
+
+<e> <s>SKT</s> <in>k</in> <out>k</out> </e>
+<e> <s>SKT</s> <in>K</in> <out>kh</out> </e>
+<e> <s>SKT</s> <in>g</in> <out>g</out> </e>
+<e> <s>SKT</s> <in>G</in> <out>gh</out> </e>
+<e> <s>SKT</s> <in>N</in> <out>n\u0307</out> </e>
+
+<e> <s>SKT</s> <in>c</in> <out>c</out> </e>
+<e> <s>SKT</s> <in>C</in> <out>ch</out> </e>
+<e> <s>SKT</s> <in>j</in> <out>j</out> </e>
+<e> <s>SKT</s> <in>J</in> <out>jh</out> </e>
+<e> <s>SKT</s> <in>Y</in> <out>n\u0303</out> </e>
+
+<e> <s>SKT</s> <in>w</in> <out>t\u0323</out> </e>
+<e> <s>SKT</s> <in>W</in> <out>t\u0323h</out> </e>
+<e> <s>SKT</s> <in>q</in> <out>d\u0323</out> </e>
+<e> <s>SKT</s> <in>L</in> <out>l\u0323</out> </e>
+<!-- lowercase l + dot below; uppercase L + dot below -->
+<e> <s>SKT</s> <in>Q</in> <out>d\u0323h</out> </e>
+<e> <s>SKT</s> <in>|</in> <out>l\u0323h</out> </e>
+<!-- lowercase l + dot below + h; uppercase L + dot below + h -->
+<e> <s>SKT</s> <in>R</in> <out>n\u0323</out> </e>
+
+<e> <s>SKT</s> <in>t</in> <out>t</out> </e>
+<e> <s>SKT</s> <in>T</in> <out>th</out> </e>
+<e> <s>SKT</s> <in>d</in> <out>d</out> </e>
+<e> <s>SKT</s> <in>D</in> <out>dh</out> </e>
+<e> <s>SKT</s> <in>n</in> <out>n</out> </e>
+
+<e> <s>SKT</s> <in>p</in> <out>p</out> </e>
+<e> <s>SKT</s> <in>P</in> <out>ph</out> </e>
+<e> <s>SKT</s> <in>b</in> <out>b</out> </e>
+<e> <s>SKT</s> <in>B</in> <out>bh</out> </e>
+<e> <s>SKT</s> <in>m</in> <out>m</out> </e>
+
+<e> <s>SKT</s> <in>y</in> <out>y</out> </e>
+<e> <s>SKT</s> <in>r</in> <out>r</out> </e>
+<e> <s>SKT</s> <in>l</in> <out>l</out> </e>
+<e> <s>SKT</s> <in>v</in> <out>v</out> </e>
+
+<e> <s>SKT</s> <in>S</in> <out>s\u0301</out> </e>
+<e> <s>SKT</s> <in>z</in> <out>s\u0323</out> </e>
+<e> <s>SKT</s> <in>s</in> <out>s</out> </e>
+<e> <s>SKT</s> <in>h</in> <out>h</out> </e>
+
+<e> <s>SKT</s> <in>H</in> <out>h\u0323</out> </e>
+<e> <s>SKT</s> <in>Z</in> <out>h\u0331</out> </e>
+<e> <s>SKT</s> <in>V</in> <out>h\u032c</out> </e>
+<e> <s>SKT</s> <in>M</in> <out>m\u0307</out> </e>
+
+<e> <s>SKT</s> <in>'</in> <out>\u2019</out> </e><!-- apostrophe (single curly close quote) -->
+<e> <s>SKT</s> <in>~</in> <out>\u0303</out> </e><!-- combining tilde -->
+<e> <s>SKT</s> <in>/</in> <out>\u0301</out> </e><!-- combining acute -->
+<e> <s>SKT</s> <in>^</in> <out>\u0302</out> </e><!-- combining circumflex -->
+<e> <s>SKT</s> <in>\</in> <out>\u0300</out> </e><!-- combining grave -->
+<e> <s>SKT</s> <in>-?</in> <out>\u00ad</out> </e><!-- optional hyphen -->
+<e> <s>SKT</s> <in>?</in> <out>?</out> </e><!-- PMS: indicates a doubtful reading. -->
+<!--e n='119'> <in>hack1</in> <out></out></e-->
+
+<e> <s>SKT</s> <in>\u0020</in> <out>\u0020</out> </e><!-- space -->
+<e> <s>SKT</s> <in>\u0009</in> <out>\u0009</out> </e><!-- tab -->
+<e> <s>SKT</s> <in>\u000d</in> <out>\u000d</out> </e><!-- CR -->
+<e> <s>SKT</s> <in>\u000a</in> <out>\u000a</out> </e><!-- LF -->
+
+<e> <s>SKT</s> <in>-</in> <out>-</out> </e>
+<e> <s>SKT</s> <in>.</in> <out>.</out> </e>
+<!-- e n='126'> <in>,</in> <out>,</out> </e -->
+<!-- e n='127'> <in>;</in> <out>;</out> </e -->
+
+<e> <s>SKT</s> <in>0</in> <out>0</out> </e>
+<e> <s>SKT</s> <in>1</in> <out>1</out> </e>
+<e> <s>SKT</s> <in>2</in> <out>2</out> </e>
+<e> <s>SKT</s> <in>3</in> <out>3</out> </e>
+<e> <s>SKT</s> <in>4</in> <out>4</out> </e>
+<e> <s>SKT</s> <in>5</in> <out>5</out> </e>
+<e> <s>SKT</s> <in>6</in> <out>6</out> </e>
+<e> <s>SKT</s> <in>7</in> <out>7</out> </e>
+<e> <s>SKT</s> <in>8</in> <out>8</out> </e>
+<e> <s>SKT</s> <in>9</in> <out>9</out> </e>
+
+<!-- accents follow LIES spec of slp1 -->
+<e> <s>SKT</s> <in>a/</in> <out>a\u0301</out> </e>
+<e> <s>SKT</s> <in>i/</in> <out>i\u0301</out> </e>
+<e> <s>SKT</s> <in>u/</in> <out>u\u0301</out> </e>
+<e> <s>SKT</s> <in>f/</in> <out>r\u0325\u0301</out> </e><!-- r + combining ring below + acute -->
+<e> <s>SKT</s> <in>x/</in> <out>l\u0325\u0301</out> </e><!-- l + combining ring below + acute -->
+<e> <s>SKT</s> <in>A/</in> <out>a\u0304\u0301</out> </e>
+<e> <s>SKT</s> <in>I/</in> <out>i\u0304\u0301</out> </e>
+<e> <s>SKT</s> <in>U/</in> <out>u\u0304\u0301</out> </e>
+<e> <s>SKT</s> <in>F/</in> <out>r\u0325\u0304\u0301</out> </e><!-- r + combining ring below + macron + acute -->
+<e> <s>SKT</s> <in>X/</in> <out>l\u0325\u0304\u0301</out> </e><!-- l + combining ring below + macron + acute -->
+<e> <s>SKT</s> <in>e/</in> <out>e\u0301</out> </e>
+<e> <s>SKT</s> <in>o/</in> <out>o\u0301</out> </e>
+<e> <s>SKT</s> <in>E/</in> <out>ai\u0301</out> </e>
+<e> <s>SKT</s> <in>O/</in> <out>au\u0301</out> </e>
+
+<!-- svarita mapped to circumflex accent -->
+<e> <s>SKT</s> <in>a^</in> <out>a\u0302</out> </e>
+<e> <s>SKT</s> <in>i^</in> <out>i\u0302</out> </e>
+<e> <s>SKT</s> <in>u^</in> <out>u\u0302</out> </e>
+<e> <s>SKT</s> <in>f^</in> <out>r\u0325\u0302</out> </e><!-- r + combining ring below + circumflex -->
+<e> <s>SKT</s> <in>x^</in> <out>l\u0325\u0302</out> </e><!-- l + combining ring below + circumflex -->
+<e> <s>SKT</s> <in>A^</in> <out>a\u0304\u0302</out> </e>
+<e> <s>SKT</s> <in>I^</in> <out>i\u0304\u0302</out> </e>
+<e> <s>SKT</s> <in>U^</in> <out>u\u0304\u0302</out> </e>
+<e> <s>SKT</s> <in>F^</in> <out>r\u0325\u0304\u0302</out> </e><!-- r + combining ring below + macron + circumflex -->
+<e> <s>SKT</s> <in>X^</in> <out>l\u0325\u0304\u0302</out> </e><!-- l + combining ring below + macron + circumflex -->
+<e> <s>SKT</s> <in>e^</in> <out>e\u0302</out> </e>
+<e> <s>SKT</s> <in>o^</in> <out>o\u0302</out> </e>
+<e> <s>SKT</s> <in>E^</in> <out>a\u1dcdi</out> </e>
+<e> <s>SKT</s> <in>O^</in> <out>a\u1dcdu</out> </e>
+<!-- \u1dcd combining double circumflex above -->
+
+<!-- grave accent mark mapped to backslash -->
+<e> <s>SKT</s> <in>a\</in> <out>a\u0300</out> </e>
+<e> <s>SKT</s> <in>i\</in> <out>i\u0300</out> </e>
+<e> <s>SKT</s> <in>u\</in> <out>u\u0300</out> </e>
+<e> <s>SKT</s> <in>f\</in> <out>r\u0325\u0300</out> </e><!-- r + combining ring below + grave -->
+<e> <s>SKT</s> <in>x\</in> <out>l\u0325\u0300</out> </e><!-- l + combining ring below + grave -->
+<e> <s>SKT</s> <in>A\</in> <out>a\u0304\u0300</out> </e>
+<e> <s>SKT</s> <in>I\</in> <out>i\u0304\u0300</out> </e>
+<e> <s>SKT</s> <in>U\</in> <out>u\u0304\u0300</out> </e>
+<e> <s>SKT</s> <in>F\</in> <out>r\u0325\u0304\u0300</out> </e><!-- r + combining ring below + macron + grave -->
+<e> <s>SKT</s> <in>X\</in> <out>l\u0325\u0304\u0300</out> </e><!-- l + combining ring below + macron + grave -->
+<e> <s>SKT</s> <in>e\</in> <out>e\u0300</out> </e>
+<e> <s>SKT</s> <in>o\</in> <out>o\u0300</out> </e>
+<e> <s>SKT</s> <in>E\</in> <out>ai\u0300</out> </e>
+<e> <s>SKT</s> <in>O\</in> <out>au\u0300</out> </e>
+
+<!-- Capital letter accented and nasalized vowels and semivowels -->
+
+<!-- svarita mapped to circumflex accent -->
+<!-- \u1dcd combining double circumflex above -->
+
+<!-- grave accent mark mapped to backslash -->
+
+<!-- Nasalized vowels and semivowels and the only precomposed nasalized vowel combinations with accents -->
+<e> <s>SKT</s> <in>a~</in> <out>a\u0303</out>  </e><!-- a + tilde -->
+<e> <s>SKT</s> <in>i~</in> <out>i\u0303</out>  </e><!-- i + tilde -->
+<e> <s>SKT</s> <in>u~</in> <out>u\u0303</out>  </e><!-- u + tilde -->
+<e> <s>SKT</s> <in>u/~</in> <out>u\u0303\u0301</out>  </e><!-- u + tilde + acute -->
+<e> <s>SKT</s> <in>e~</in> <out>e\u0303</out>  </e><!-- e + tilde -->
+<e> <s>SKT</s> <in>o~</in> <out>o\u0303</out>  </e><!-- o + tilde -->
+<e> <s>SKT</s> <in>o/~</in> <out>o\u0303\u0301</out>  </e><!-- o + tilde + acute -->
+<e> <s>SKT</s> <in>E~</in> <out>ai\u0303</out>  </e><!-- a + i tilde -->
+<e> <s>SKT</s> <in>O~</in> <out>au\u0303</out>  </e><!-- a + u tilde -->
+<e> <s>SKT</s> <in>O/~</in> <out>au\u0303\u0301</out>  </e><!-- a + u + tilde + acute -->
+<e> <s>SKT</s> <in>y~</in> <out>y\u0303</out>  </e><!-- y + tilde -->
+<e> <s>SKT</s> <in>v~</in> <out>v\u0303</out>  </e><!-- v + tilde -->
+<e> <s>SKT</s> <in>l~</in> <out>l\u0303</out>  </e><!-- l + tilde -->
+
+<!-- Missing other nasalized vowel combinations with accents -->
+</fsm>
